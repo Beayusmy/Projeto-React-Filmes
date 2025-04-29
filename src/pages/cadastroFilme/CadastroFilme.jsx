@@ -1,23 +1,22 @@
-import Header from "../../components/header/Header"
+import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import Cadastro from "../../components/cadastro/Cadastro";
-import Lista from "../../components/lista/Lista";
-// import { Fragment } from "react";
+import Lista from "../../components/lista/Lista"
+import { Fragment } from "react";
 
-const CadastroFilme = () => {
+const CadastroFilme = () =>{
     return(
-      <>
-        <Header/>
-        <main> 
+        <> {/*Fragment, o pai da estrutura e a forma melhor e mais segura pra não dar pau no seu codigo**/ }
+            <Header/>
+            <main>
+                <Cadastro tituloCadastro ="cadastro de Filme"
+                placeholder="Filme"
+                />
+            <Lista/>
+            </main>
+            <Footer/>
 
-        <Cadastro/>
-        <Lista/>
-
-        </main>
-        <Footer/>
         </>
-        
     )
 }
-
 export default CadastroFilme;

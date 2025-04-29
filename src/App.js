@@ -1,17 +1,10 @@
 import './App.css';
-import CadastroFilme from './pages/cadastroFilme/CadastroFilme';
-import Login from "./pages/login/Login";
-import Footer from "./components/footer/Footer"
+import Routes from "./Routes/routes"
 
 function App() {
   return (
-    <>
-      {/* chamar as paginas */}
-      {/* <Login/> */}
-      <CadastroFilme/>
-    </>
+    <Routes/>
   );
 }
-
-
+//essa linha de codigo é responsavel por exportar o App.js, permitindo que ele seja chamado em outras pastas.
 export default App;
