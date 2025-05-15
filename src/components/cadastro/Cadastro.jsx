@@ -13,7 +13,7 @@ const Cadastro = (props) => {
                     <input 
                     type="text" 
                     name="nome" 
-                    id= "" placeholder={`Digite o nome do ${props.nomeInput}`}
+                   placeholder={`Digite o nome do ${props.nomeInput}`}
                     value={props.valorInput}
                     //ao mudar o input algo acontece:
                     //Atualizar o estado do pai ao digitar
