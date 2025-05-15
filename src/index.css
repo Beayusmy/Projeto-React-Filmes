@@ -1,8 +1,12 @@
-*{
+/* vamos colocar estilos padrao */
+/* reset css */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     font-family: "Montserrat", sans-serif;
+
 }
 
 .layout_grid{
@@ -11,3 +15,4 @@
     max-width: 80%;
     margin: 0 auto;
 }
+

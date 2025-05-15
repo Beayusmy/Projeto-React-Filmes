@@ -1,10 +1,10 @@
-import './App.css';
-import Routes from "./Routes/routes"
+import './App.css'; //tudo o que estiver no arquivo app.js vai ser mostrado na nossa tela/ chamar as telas
+import Rotas from "./Routes/routes"
 
 function App() {
   return (
-    <Routes/>
+   <Rotas/>
   );
 }
-//essa linha de codigo é responsavel por exportar o App.js, permitindo que ele seja chamado em outras pastas.
+
 export default App;

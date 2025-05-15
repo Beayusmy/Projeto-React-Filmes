@@ -1,22 +1,27 @@
-import Header from "../../components/header/Header";
+import Header from "../../components/hearder/Header";
 import Footer from "../../components/footer/Footer";
 import Cadastro from "../../components/cadastro/Cadastro";
 import Lista from "../../components/lista/Lista"
 import { Fragment } from "react";
 
-const CadastroFilme = () =>{
+const CadastroFilme = () => {
     return(
-        <> {/*Fragment, o pai da estrutura e a forma melhor e mais segura pra não dar pau no seu codigo**/ }
+        <Fragment>
             <Header/>
             <main>
-                <Cadastro tituloCadastro ="cadastro de Filme"
-                placeholder="Filme"
-                />
-            <Lista/>
+            <Cadastro tituloCadastro="Cadastro de Filmes"
+            nomeInput = "Filme"
+            
+            />
+            <Lista
+            tituloLista = "Filmes"
+            />
             </main>
             <Footer/>
-
-        </>
+        </Fragment>
+        //dentro do jsx é obrigatorio uma tag pai, que nesse caso usamos o Fragment que é um pai que agrupa elementos sem nó
+        // ou voce escreve a palavra fragment ou voce usa o simbolo <> = mesma coisa que escrever a palavra fragment no codigo
     )
+
 }
-export default CadastroFilme;
+ export default CadastroFilme;
