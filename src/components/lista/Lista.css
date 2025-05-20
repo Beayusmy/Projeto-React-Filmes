@@ -1,108 +1,104 @@
-.listagem{
-    /* esse calc serve para calcular  */
-    /* vamos retirar o tamanho do 
-    header
-    cadastro
-    footer
-    nao pode ter menos que as informacoes que calculamos por isso usamos o min-height */
-    min-height: calc(100vh - (75px + 252px + 40px ));
-    /* display flex faz com que eu faça uma movimentaçao mais rapida */
-
+listagem {
+ 
+    min-height: calc( 100vh - (75px + 252px + 40px));
     display: flex;
     flex-direction: column;
     align-items: center;
+   
     padding: 40px 0;
 }
-
 .listagem h1{
-    /* usamos o uppercase para deixar a letra maiculuca */
-    text-transform: uppercase;
-}
 
+   text-transform: uppercase;
+ 
+ }
 .listagem hr{
-    /* tudo isso pra deixar uma linha reta embaixo */
-    max-width: 300px;
-    width: 100%;
-    margin-top: 5px;
-    border-color: #73061B;
-    border-width: 1px;
-    border-style: solid;
+  
+     max-width: 300px;
+     width: 100%;
+     border-width:1px ;
+     border-style:solid ;
+     border-color: #73061B; /*#73061B*/
+ 
+     margin-top: 5px;
 }
+.item_lista img{
 
-.item_lista img {
-    height: 30px;
+height: 28px;
+
 }
-
 .tabela{
-    width: 100%;
-    margin-top: 30px;
+width: 100%;
+margin-top: 30px;
+   
 }
-
 .tabela table{
-    width: 100%;
-    border-collapse: collapse;
-    /* margin-top serve para separar a parte de cima */
+width: 100%;
+
+border-bottom: collapse;
 
 }
 
-/* first-child => primeiro filho, seria a primeira informacao do th cabecalho que no caso seria nome */
-/* damos o .tabela porque essa classe chamada cabecalho ja esta definida no header, para nao dar confusao chamamos ele */
 .tabela .table_cabecalho :first-child{
-    width: 300px;
+width: 300px;
+
 }
 
-/* isso seria para voce pegar a segunda infprmacao, nth =>  um numero do filho do meu th*/
-/* damos o .tabela porque essa classe chamda cabecalho ja esta definida no header, para nao dar confusao chamamos ele */
 .tabela .table_cabecalho :nth-child(2){
-    width: 200px;
+
+/*background-color: #73061B;*/
+width: 200px;
 }
 
 .tabela .table_cabecalho th{
-  /* damos o .tabela porque essa classe chamada cabecalho ja esta definida no header, para nao dar confusao chamamos ele */
-    width: 100px;
-}
+width: 100px;
 
-.item_lista td{
-    /* usamos isso para desgrudar o item do titulo */
-    padding: 20px 0 10px 0;
+
+}
+.item_lista td {
+padding: 20px 0 10px 0 ;
+/* text-align: left;
+padding: 10px 10px 10px 0px;
+grid-template-columns: 10ch auto; */
 }
 
 .item_lista{
-    text-align: center;
-    border-bottom: solid 1px #73061B20;
+text-align: center;
+
+border-bottom: solid 1px #ac092ad7;/*#73061b20*/
 }
 
+@media screen and ( max-width:768px ) {
 
-@media screen and (max-width: 768px){
-    /* 1px - 768px */
-
-    /* um elemento abaixo do outro:  */
     .tabela thead{
-        display: none;
-    }
+       display: none;
 
+    }
     .item_lista td{
-        display: grid;
-        text-align: left;
-        padding: 10px 10px 10px 0;
-        grid-template-columns: 10ch auto;
+
+       display: grid;
+       text-align: left;
+       padding: 10px 10px 10px  0px ;
+       grid-template-columns: 10ch auto;
 
     }
-
     .item_lista td::before{
-        /* adiciona o data-cell do html e coloca os ":" depois */
-        content: attr(data-cell) ":";
-        font-weight: 700;
-        width: 80px;
-        text-align: left;
-    }
+       
+          content: attr(data-cell) ":";
+          font-weight: 700;
+          width: 80px;
+          text-align: left;
 
 
-    .item_lista td:last-child{
-        margin-bottom: 24px;
     }
 
-    .item_lista td:first-child{
-        margin-top: 10px;
-    }
+    .item_lista td:last-child {
+    margin-bottom: 24px;
+
+   }
+   .item_lista td:first-child{
+
+    margin-top: 24px;
+   }
+   
 }

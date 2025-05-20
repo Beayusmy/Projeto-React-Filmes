@@ -1,9 +1,14 @@
-import './App.css'; //tudo o que estiver no arquivo app.js vai ser mostrado na nossa tela/ chamar as telas
-import Rotas from "./Routes/routes"
-
+//chamar as telas 
+import './App.css';
+import CadastroFilme from './pages/cadastroFilme/CadastroFilme.jsx';
+import Login from "./pages/login/Login.jsx"
 function App() {
   return (
-   <Rotas/>
+    <>
+    {/* chamar as páginas */}
+    {/* <Login/> */}
+     <CadastroFilme/>
+    </>
   );
 }
 
